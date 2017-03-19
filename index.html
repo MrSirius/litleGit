@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Начало JS, понеслась</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+    <header>
+    <div class="header">
+        <img src="img/Javascritp.png" alt="JavaScript">
+        <span> JavaScript</span>
+        <nav>
+            <ul>
+                <li><a href="DomJquery.html"> DOM</a></li>
+                <li><a href="exersaiz.html">Упражнение</a></li>
+                <li><a href="#">Что-то будет</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+    <div class="content">
+        <div class="slaider">
+            Тут будет слайдер, на JQuery
+        </div>
+        Турбо <br/>
+        <h1>Дразнилка (tease)1</h1>
+        <script>
+            var bodyParts = ['Нос','Рука','Череп','Зубы','Уши','Хвост','Шерсть','Мозги','Ноготь'];
+            var adjectives = ['хмурая','нудная','вонючая','глупая','кривая','шизанутая'];
+            var someWords =['дубина','макака','тетрадка','лавочка','гитара','тумба','лес','лампа','ваза'];
+            var result;
+            var bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            var  adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+            var someWord = someWords[Math.floor(Math.random() * someWords.length)];
+            result = 'У тебя ' + bodyPart + ' словно ' + adjective + ' ' + someWord;
+            document.write(result);
+        </script>
+        <h1>Дразнилка 2, в виде функии</h1>
+    <script>
+        function pickRandomWord (words){
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function generateRandomInsult (){
+            var bodyParts = ['Нос','Рука','Череп','Зубы','Уши','Хвост','Шерсть','Мозги','Ноготь'];
+            var adjectives = ['хмурая','нудная','вонючая','глупая','кривая','шизанутая'];
+            var someWords =['дубина','макака','тетрадка','лавочка','гитара','тумба','лес','лампа','ваза'];
+            var  randomString ='У тебя ' + pickRandomWord(bodyParts) + ' точ в точ, как у ' +pickRandomWord(adjectives) + ' ' + pickRandomWord(someWords) ;
+            document.write(randomString);
+            return randomString;
+        }
+        generateRandomInsult();
+    </script>
+        <h1> Цикл FOR очень крут</h1>
+        <script>
+            var animals=['Cat','fish','lemur','Komodo dragon'];
+            for (var i=0; i < animals.length;i++){
+                document.write(animals[i] + ' - дивный <br/>');
+            }
+        </script>
+        <h1>ИГРА ВИСЕЛИЦА 1-й вариант, недоделанный</h1>
+        <!--
+        <script>
+            var bodyParts = ['Нос','Рука','Череп','Зубы','Уши','Хвост','Шерсть','Мозги','Ноготь'];
+            var adjectives = ['хмурая','нудная','вонючая','глупая','кривая','шизанутая'];
+            var someWords =['дубина','макака','тетрадка','лавочка','гитара','тумба','лес','лампа','ваза'];
+            var words = bodyParts.concat(adjectives,someWords);//Объединение 3-х массивов
+
+            var word = words[Math.floor(Math.random() * words.length)];//Выбор случайного слова из объединённого массива
+            word = word.toLowerCase();
+            var answerArray = [];//итоговый массив
+            for(var i=0; i < word.length; i++){
+                answerArray[i] = '_';
+            }
+           var remainigLetters = word.length;//оставшееся буквы
+            var oatesMoves = 10;//число ходов
+            //Игровой цикл
+            while (remainigLetters > 0 && oatesMoves > 0 ) {
+                alert(answerArray.join(' '));//Состояние игры
+                alert('Осталось ходов ' + oatesMoves);
+                var guess = prompt('Угадай букву или выйди из игры нажав "Отмена"');//запрашиваем вариант ответа
+                guess = guess.toLowerCase();//все переводится в малый регистр
+                if (guess === null) {
+                    break;//если нажали отмену, прерываем цикл
+                } else if (guess.length !== 1) {//если ввели более 1-го символа попросить ввести заного
+                    alert('Введите 1-у букву');
+                }else {
+                    for(var j = 0; j < word.length; j++){//обновляем стостояние игры
+                        if (word[j] === guess && answerArray[j] !== guess) {
+                            answerArray[j] = guess;
+                            remainigLetters--;
+                        }
+                    }
+                }
+                oatesMoves--;
+                if (oatesMoves == 0){
+                    alert('Ходы закончились! Было загадано: ' + word);
+                    break;
+                }
+            }
+            alert(answerArray.join(' '));
+            alert('Щикарно! Было загаданно слово ' + word);
+        </script>
+        --></div>
+    </main>
+</div>
+
+
+
+
+</body>
+</html>
