@@ -11,6 +11,10 @@ header{
 
     border-bottom: gray 2px solid;
 }
+h3{
+    color: #ff6b1b;
+    font-style: italic;
+}
 .header{
     max-width: 1024px;
     margin: 0 auto;
@@ -53,4 +57,16 @@ section{
 }
 .content{
     background: #269fe4;
+}
+.proval{
+    background: blue;
+    border-radius: 10px ;
+    border: 2px solid #ff2301;
+}
+.proval>p{
+    font-weight:bold;
+    font-size:20px ;
+    color: #ff2301;
+    display: block;
+    text-align: center;
 }
