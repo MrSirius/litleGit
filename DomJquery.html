@@ -13,12 +13,12 @@
     <header>
         <div class="header">
             <img src="img/Javascritp.png" alt="JavaScript">
-            <span> JavaScript</span>
+            <span > JavaScript</span>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="exersaiz.html">Упражнеие</a></li>
-                    <li><a href="#">Что-то будет</a></li>
+                    <li><a href="reshenieexer.html">Ответы на задачи</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,11 +51,39 @@
 
             </script>
 
-            <h2>Драза 2, в и</h2>
-                <!--
-                            <h1> Цт</h1>
-                -->
+            <h2 id="heading">Интегрированное программирование</h2>
+           <span>отложить на время</span>
+            <script>/*
+                var timeUp = function () {
+                    alert('время вышло');
+                }
+                setTimeout(timeUp, 5000);*/
+            </script>
+            <span>отложить, а затем отменить отложение</span>
+            <script>/*
+                function doHomeWork() {
+                    alert('HF,JNFNM!');
+                };
+                var tineOutId = setTimeout(doHomeWork, 1000);
+                clearTimeout(tineOutId);*/
+            </script>
+            <br>
+            <span>setInterval</span>
+            <script>
+                var leftOffSet = 0;
+                function moveHeading() {
+                    $('#heading').offset({left:leftOffSet});
+                    leftOffSet++;
+                    if (leftOffSet > 200){
+                        leftOffSet = 0;
+                    }
+                };
+                setInterval(moveHeading,100)
+            </script>
+               <h2>реакция на клики</h2>
+            <script>
 
+            </script>
             </div>
     </main>
 </div>
