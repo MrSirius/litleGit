@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Упражнения</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="main">
+    <header>
+        <div class="header">
+            <img src="img/Javascritp.png" alt="JavaScript">
+            <span> JavaScript</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="DomJquery.html">ДОМ</a></li>
+                    <li><a href="exersaiz.html">Задачи</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="slaider">
+                Тут будет слайдер, на JQuery
+            </div>
+            <h3>Рение закач</h3>
+            <section>
+                <h3>глава 3, массивы.</h3>
+                <h4>Задача 1. Генератор случайных дразнилок</h4>
+                <p></p>
+                <script>
+                    var partOfBody = ['Голова', 'Рука', 'Нога', 'Туловище'];
+                    var animal = ['Горилла', 'Крокодил', 'Чихуа-хуа', 'Чайка', 'Ослинна'];
+                    var someDisease = ['Тошнотная', 'Гнилая', 'Больная', 'Склирозная'];
+                    var randomBodyPart = partOfBody[Math.floor(Math.random()*partOfBody.length)];
+                    var randomAnimal = animal[Math.floor(Math.random()*partOfBody.length)];
+                    var randomDisease = someDisease[Math.floor(Math.random()*partOfBody.length)];
+                    var result = 'У тебя ' + randomBodyPart + ' Как у ' + randomDisease + ' ' + randomAnimal;
+                    document.write(result);
+                </script>
+                <div class="code">
+            <p>
+            &lt;script&gt;
+                var partOfBody = ['Голова', 'Рука', 'Нога', 'Туловище'];
+                var animal = ['Горилла', 'Крокодил', 'Чихуа-хуа', 'Чайка', 'Ослинна'];
+                var someDisease = ['Тошнотная', 'Гнилая', 'Больная', 'Склирозная'];
+                var randomBodyPart = partOfBody[Math.floor(Math.random()*partOfBody.length)];
+                var randomAnimal = animal[Math.floor(Math.random()*partOfBody.length)];
+                var randomDisease = someDisease[Math.floor(Math.random()*partOfBody.length)];
+                var result = 'У тебя ' + randomBodyPart + ' Как у ' + randomDisease + ' ' + randomAnimal;
+                document.write(result);
+            &lt;/script&gt;
+                    </p>
+                </div>
+                <h4>№2. Изощренные дразнилки</h4>
+                <script>
+                    var someBodyPart = ['нога','рука','нос','глаз','ухо'];
+                    var adjective = ['дурацкий','глупый','ослинный','вонючий','мохнатый','драный','склизкий'];
+                    var animal = ['варан','курица','слизень','глухарь','мартышка','котяра'];
+                    var randomBodyPart = someBodyPart[Math.floor(Math.random() * someBodyPart.length)];
+                    var randomAdjective = adjective[Math.floor(Math.random() * adjective.length)];
+                    var randomAnimal = animal[Math.floor(Math.random() * animal.length)];
+                    var result = 'У тебя ' + randomBodyPart + ' ещё больше ' + randomAdjective + ' чем ' + randomAnimal;
+                    document.write(result);
+                </script>
+             <div class="code">
+                <p>
+                  &lt;script&gt;
+                     var someBodyPart = ['нога','рука','нос','глаз','ухо'];
+                     var adjective = ['дурацкий','глупый','ослинный','вонючий','мохнатый','драный','склизкий'];
+                     var animal = ['варан','курица','слизень','глухарь','мартышка','котяра'];
+                     var randomBodyPart = someBodyPart[Math.floor(Math.random() * someBodyPart.length)];
+                     var randomAdjective = adjective[Math.floor(Math.random() * adjective.length)];
+                     var randomAnimal = animal[Math.floor(Math.random() * animal.length)];
+                     var result = 'У тебя ' + randomBodyPart + ' ещё больше ' + randomAdjective + ' чем ' + randomAnimal;
+                     document.write(result);
+                  &lt;/script&gt;
+                </p>
+             </div>
+                <h4>№3. Оператор + или join?</h4>
+                <script>
+                    /*var someBodyPart2 = ['нога','рука','нос','глаз','ухо'];
+                    var adjective2 = ['дурацкий','глупый','ослинный','вонючий','мохнатый','драный','склизкий'];
+                    var animal2 = ['варан','курица','слизень','глухарь','мартышка','котяра'];
+                    var randomBodyPart2 = someBodyPart2[Math.floor(Math.random() * someBodyPart2.length)];
+                    var randomAdjective2 = adjective2[Math.floor(Math.random() * adjective2.length)];
+                    var randomAnimal2 = animal2[Math.floor(Math.random() * animal2.length)];
+                    var result2 =  randomBodyPart2.concat(randomAdjective2,randomAnimal2) ;
+
+                    document.write(result2.join(' '));*/
+                </script>
+                <div class="proval">
+                    <p>Не получилось</p>
+                </div>
+                <div class="code">
+                    <p>
+                        &lt;script&gt;
+                                 увы и ах
+                        &lt;/script&gt;
+                    </p>
+                </div>
+                <h4>№4. Соединение чисел</h4>
+                <script></script>
+            </section>
+            <section>
+                <h3>Глава 4, Объекты</h3>
+                <h4>Подсчет очков</h4>
+                <script>
+                    var sourse = {
+                        'Vasya' : 0,
+                        'Tanya' : 0
+                    };
+                    sourse.Vasya += 5;
+                  document.write('Tanya =',sourse.Tanya);
+                    document.write('Vasya =',sourse.Vasya);
+                </script>
+                <h4>№2 Вглубь объектов и массивов</h4>
+                <script>
+                    var myCrazyObject = {
+                        "name": "Нелепый объект",
+                        "some array": [7, 9, {purpose: "путаница", number: 123}, 3.3],
+                        "random animal": "Банановая акула"
+                    }
+                    document.write(myCrazyObject['some array'][2]['number']);
+
+                </script>
+
+            </section>
+            <section>
+                <h3>Глава 6. Циклы</h3>
+                <h4>№1. Прекрассные животные</h4>
+                <script>
+                    var string = ' - Прекрассное животное';
+                    var animals = ['Кот','Рыба','Лемур','Комодский варан'];
+                    for (i = 0; i < animals.length; i++){
+                        animals[i]= animals[i] + string;//animals[i]+=string
+                    }
+                    document.write(animals);
+                </script>
+                <h4>Генератор случайных дразнилок</h4>
+                <script type="application/javascript">
+
+                    var alphabet ='абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+                    var randomSting ='';
+                    while ( p<6){
+                     var  randomAlphabet =alphabet[Math.floor(Math.random() * alphabet.length)];
+                        randomSting +=alphabet[randomAlphabet];
+                        p++;
+                    }
+                    console.log(randomSting);
+
+                </script>
+            </section>
+
+
+
+        </div>
+    </main>
+</div>
+
+
+
+
+</body>
+</html>
